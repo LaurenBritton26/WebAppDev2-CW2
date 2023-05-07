@@ -1,0 +1,84 @@
+<html>
+    <head>
+        {{>section/header}}
+    </head>
+
+    <body style = "background-color:#0E3542">
+        
+       {{>section/nav}}
+    
+        <div class="text-right" style="margin-bottom: 1em;">
+    {{^user}}
+        <a id="login" href="/register" class="btn btn-light">
+            Register
+        </a>
+        <a id="login" href="/login" class="btn btn-light">
+            Login
+        </a>
+    {{/user}}
+    {{#user}}
+        <a id="logout" href="/logout" class="btn btn-light">
+            Log Out
+        </a>
+    {{/user}}
+    </div>
+    
+
+         <div class="container-fluid text-center">
+        <div class="row content">
+            <div class = "col-sm-2 left" style="background-color:#2B4E69">
+        
+
+            </div>
+        
+            <div class= "col-sm-8 centre" style="background-color:#10807e">
+            <br>
+            <h2 style=" text-decoration : underline"> Add a new goal </h2>
+            <br>
+            <p> Tell us what you want to achieve: </p>
+
+            <form method="POST" action="/newGoal">
+                <div class="form-group">
+                    <label for="goal_type"> Goal Type:</label>
+                    <select class="form-control" id="goal_type" name="goal_type">
+                        <option> Nutrition </option>
+                        <option> Fitness </option>
+                        <option> Lifestyle </option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="goal"> Goal: </label>
+                    <input type="text" class="form-control" id="goal" name="goal">
+                </div>
+                <div class="form-group">
+                    <label for="duration"> Goal Duration: </label>
+                    <select class="form-control" id="duration" name="duration">
+                        <option> 1 Week </option>
+                        <option> 2 Weeks </option>
+                        <option> 3 weeks </option>
+                        <option> 4 Weeks </option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="achieved"> Goal Achieved </label>
+                    <select class="form-control" id="achieved" name="achieved">
+                        <option> Not Yet </option>
+                        <option> Just Started </option>
+                        <option> I've Done It! </option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button type="submit" value="Post Goal" class="btn btn-light"> Add your goal!</button>
+                </div>
+            </div>
+
+            <div class= "col-sm-2 right" style="background-color:#2B4E69">
+
+            </div> 
+        </div>
+    </div> 
+
+         {{>section/footer}}
+
+    </body>
+</html>

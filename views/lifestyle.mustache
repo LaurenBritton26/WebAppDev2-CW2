@@ -1,0 +1,71 @@
+<html>
+    <head>
+         {{>section/header}}
+    </head>
+
+    <body style = "background-color:#0E3542">
+        
+        {{>section/nav}}
+    
+    <div class="text-right" style="margin-bottom: 1em;">
+    {{^user}}
+        <a id="login" href="/register" class="btn btn-light">
+            Register
+        </a>
+        <a id="login" href="/login" class="btn btn-light">
+            Login
+        </a>
+    {{/user}}
+    {{#user}}
+        <a id="logout" href="/logout" class="btn btn-light">
+            Log Out
+        </a>
+    {{/user}}
+    </div>
+
+      <div class="container-fluid text-center">
+        <div class="row content">
+            <div class = "col-sm-2 left">
+        
+
+            </div>
+        
+            <div class= "col-sm-8 centre" style="background-color : #54B86B">
+                <br>
+                <h2 style="text-decoration: underline"> Lifestyle </h2>
+                <br>
+
+                <a id="viewLifestyleGoals" href="/lifestyleGoals" class="btn btn-primary">
+                View your Lifestyle Goals!
+                </a>
+
+                <a id="addGoal" href="/newGoal" class="btn btn-primary">
+                Add a New Goal!
+                </a>
+
+                <p> A healthy lifestyle isn't just about eating nutritious foods. It's also
+                about being physically active, balancing your work and social life, getting
+                enough sleep, and focusing on your mental health. It can be overwhelming to do 
+                it all.</p>
+             
+                <p> With a healthy lifestyle you can:  </p>
+                <p> Improve your physical health </p>
+                <p> Improve your mental health</p>
+                <p> Get more energy naturally </p>
+                <p> Boost your mood</p>
+                <p> Prevent diseases and health issues</p>
+        
+                        
+            </div>
+
+            <div class= "col-sm-2 right">
+
+            </div> 
+        </div>
+    </div> 
+       
+         {{>section/footer}}
+
+
+    </body>
+</html>

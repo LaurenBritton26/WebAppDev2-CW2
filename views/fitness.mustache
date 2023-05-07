@@ -1,0 +1,71 @@
+<html>
+    <head>
+         {{>section/header}}
+    </head>
+
+    <body style = "background-color:#0E3542">
+        
+        {{>section/nav}}
+    
+    <div class="text-right" style="margin-bottom: 1em;">
+    {{^user}}
+        <a id="login" href="/register" class="btn btn-light">
+            Register
+        </a>
+        <a id="login" href="/login" class="btn btn-light">
+            Login
+        </a>
+    {{/user}}
+    {{#user}}
+        <a id="logout" href="/logout" class="btn btn-light">
+            Log Out
+        </a>
+    {{/user}}
+    </div>
+
+      <div class="container-fluid text-center">
+        <div class="row content">
+            <div class = "col-sm-2 left">
+        
+
+            </div>
+        
+            <div class= "col-sm-8 centre" style="background-color : #54B86B">
+                <br>
+                <h2 style="text-decoration: underline"> Fitness </h2>
+                <br>
+
+                <a id="viewFitnessGoals" href="/fitnessGoals" class="btn btn-primary">
+                View your Fitness Goals!
+                </a>
+
+                <a id="addGoal" href="/newGoal" class="btn btn-primary">
+                Add a New Goal!
+                </a>
+
+                <p> Regular physical activity can relieve stress, anxiety, depression and anger.
+                You know that "feel good sensation" you get after something physical? Think of it 
+                as a happy pill with no side effects! Most people notice they feel better over time as physical
+                activity becomes a regular part of their lives</p>
+             
+                <p> Being more active can help you : </p>
+                <p> Lower your blood pressure</p>
+                <p> Boost your levels of good cholesterol</p>
+                <p> Improve blood flow(circulation) </p>
+                <p> Keep your weight under control</p>
+                <p> Prevent bone loss that can lead to osteoporosis</p>
+        
+                        
+            </div>
+
+            <div class= "col-sm-2 right">
+
+            </div> 
+        </div>
+    </div> 
+       
+         {{>section/footer}}
+
+
+    </body>
+</html>

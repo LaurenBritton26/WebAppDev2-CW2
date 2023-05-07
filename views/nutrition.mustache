@@ -1,0 +1,71 @@
+<html>
+    <head>
+         {{>section/header}}
+    </head>
+
+    <body style = "background-color:#0E3542">
+        
+        {{>section/nav}}
+    
+    <div class="text-right" style="margin-bottom: 1em;">
+    {{^user}}
+        <a id="login" href="/register" class="btn btn-light">
+            Register
+        </a>
+        <a id="login" href="/login" class="btn btn-light">
+            Login
+        </a>
+    {{/user}}
+    {{#user}}
+        <a id="logout" href="/logout" class="btn btn-light">
+            Log Out
+        </a>
+    {{/user}}
+    </div>
+
+      <div class="container-fluid text-center">
+        <div class="row content">
+            <div class = "col-sm-2 left">
+        
+
+            </div>
+        
+            <div class= "col-sm-8 centre" style="background-color : #54B86B">
+                <br>
+                <h2 style="text-decoration: underline"> Nutrition </h2>
+                <br>
+
+                <a id="viewNutritionGoals" href="/nutritionGoals" class="btn btn-primary">
+                View your Nutrition Goals!
+                </a>
+
+                <a id="addGoal" href="/newGoal" class="btn btn-primary">
+                Add a New Goal!
+                </a>
+
+                <p> Nutrition is how food and drink affect your body, good nutrition 
+                is making sure you get the right amount of each nutrient by choosing the right foods to eat.
+                Each food contains different nutrients these are: Carbohydrates, Fats, Fibre, Minerals,
+                Proteins, Vitamins and Water</p>
+             
+                <p> The food you put into your body has an impact on your health.</p>
+                <p>It boosts your immune system</p>
+                <p>It boosts your energy levels</p>
+                <p>It boosts your mood</p>
+                <p>It helps you become and maintain a healthy weight</p>
+                <p>It improves your general wellbeing</p>
+        
+                        
+            </div>
+
+            <div class= "col-sm-2 right">
+
+            </div> 
+        </div>
+    </div> 
+       
+         {{>section/footer}}
+
+
+    </body>
+</html>

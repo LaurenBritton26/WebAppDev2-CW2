@@ -1,0 +1,52 @@
+<html>
+    <head>
+        {{>section/header}}
+    </head>
+
+    <body style = "background-color:#0E3542">
+        {{>section/nav}}
+    
+<div class="text-right" style="margin-bottom: 1em;">
+    {{^user}}
+        <a id="login" href="/register" class="btn btn-light">
+            Register
+        </a>
+        <a id="login" href="/login" class="btn btn-light">
+            Login
+        </a>
+    {{/user}}
+    {{#user}}
+        <a id="logout" href="/logout" class="btn btn-light">
+            Log Out
+        </a>
+    {{/user}}
+    </div>
+    <div class="container-fluid text-center">
+        <div class="row content">
+            <div class = "col-sm-2 left" style="background-color:#2B4E69">
+
+            </div>
+       
+            <div class= "col-sm-8 centre" style="background-color:#10807e">
+        <br>
+        <br>
+        <br>
+        <br>
+            <h2 style=" text-decoration : underline">New Goal Created!</h2>
+                <p> Your goal has been added </p>
+
+        <br>
+        <br>
+        <br>
+        <br>                
+            </div>
+        
+
+        <div class= "col-sm-2 right" style="background-color:#2B4E69">
+
+    </div>    
+
+        {{>section/footer}}
+
+    </body>
+</html>

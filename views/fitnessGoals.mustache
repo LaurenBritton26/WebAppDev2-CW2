@@ -1,0 +1,105 @@
+<html>
+    <head>
+         {{>section/header}}
+    </head>
+
+    <body style = "background-color:#0E3542">
+        
+        {{>section/nav}}
+    
+    <div class="text-right" style="margin-bottom: 1em;">
+    {{^user}}
+        <a id="login" href="/register" class="btn btn-light">
+            Register
+        </a>
+        <a id="login" href="/login" class="btn btn-light">
+            Login
+        </a>
+    {{/user}}
+    {{#user}}
+        <a id="logout" href="/logout" class="btn btn-light">
+            Log Out
+        </a>
+    {{/user}}
+    </div>
+
+      <div class="container-fluid text-center">
+        <div class="row content">
+            <div class = "col-sm-2 left">
+        
+
+            </div>
+        
+            <div class= "col-sm-8 centre" style="background-color : #54B86B">
+                <br>
+                <h2 style="text-decoration: underline"> Your Fitness Goals! </h2>
+                <br>
+                <br>
+
+            {{#fitnessGoals}}
+
+            <table class="table table-bordered" style="background-color : #54B86B">
+                <thead>
+                    <tr>
+                        <th>Goal Type </th>
+                        <th>Goal</th>
+                        <th>Goal Duration</th>
+                        <th>Goal Achieved</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td> {{goal_type}} </td>
+                        <td> {{goal}} </td>
+                        <td> {{duration}} </td>
+                        <td> {{achieved}} </td>
+                    </tr>
+                    <tr>
+                        <td> {{goal_type}} </td>
+                        <td> {{goal}} </td>
+                        <td> {{duration}} </td>
+                        <td> {{achieved}} </td>
+                    </tr>
+                    <tr>
+                        <td> {{goal_type}} </td>
+                        <td> {{goal}} </td>
+                        <td> {{duration}} </td>
+                        <td> {{achieved}} </td>
+                    </tr>
+                     <tr>
+                        <td> {{goal_type}} </td>
+                        <td> {{goal}} </td>
+                        <td> {{duration}} </td>
+                        <td> {{achieved}} </td>
+                    </tr>
+                     <tr>
+                        <td> {{goal_type}} </td>
+                        <td> {{goal}} </td>
+                        <td> {{duration}} </td>
+                        <td> {{achieved}} </td>
+                    </tr>
+                     <tr>
+                        <td> {{goal_type}} </td>
+                        <td> {{goal}} </td>
+                        <td> {{duration}} </td>
+                        <td> {{achieved}} </td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+            {{/fitnessGoals}}
+                        
+            </div>
+
+            <div class= "col-sm-2 right">
+
+            </div> 
+        </div>
+    </div> 
+       
+         {{>section/footer}}
+
+
+    </body>
+</html>
